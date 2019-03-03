@@ -13,13 +13,13 @@ RUN apt-get update && apt-get install -y \
   && echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list \
   && apt-get update && apt-get install -y \
     yarn \
-    jq \
-    rsync \
     google-chrome-stable \
     nodejs \
     --no-install-recommends \
   && apt-get purge --auto-remove -y gnupg \
   && rm -rf /var/lib/apt/lists/*
 
+
 ARG CACHEBUST=1
 RUN yarn global add lighthouse
+RUN yarn global add chrome-launcher
