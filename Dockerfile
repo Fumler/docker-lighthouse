@@ -5,6 +5,7 @@ RUN apt-get update && apt-get install -y \
     ca-certificates \
     curl \
     gnupg \
+    git \
     --no-install-recommends \
   && curl -sSL https://deb.nodesource.com/setup_10.x | bash - \
   && curl -sSL https://dl.google.com/linux/linux_signing_key.pub | apt-key add - \
